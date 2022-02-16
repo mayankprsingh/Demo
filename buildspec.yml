@@ -7,8 +7,8 @@ phases:
       - mvn clean install
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws --region us-east-2 ecr get-login-password | docker login --username AWS --password-stdin 461335211022.dkr.ecr.us-east-2.amazonaws.com
-      - REPOSITORY_URI=461335211022.dkr.ecr.us-east-2.amazonaws.com/repository2
+      - aws --region us-east-1 ecr get-login-password | docker login --username AWS --password-stdin 155124136070.dkr.ecr.us-east-1.amazonaws.com
+      - REPOSITORY_URI=155124136070.dkr.ecr.us-east-1.amazonaws.com/demoecr
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
