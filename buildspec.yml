@@ -5,11 +5,6 @@ phases:
   pre_build:
     commands:
       - mvn clean install
-      - apt-get install wget apt-transport-https gnupg
-      - wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add -
-      - echo deb https://aquasecurity.github.io/trivy-repo/deb bionic main | tee -a /etc/apt/sources.list.d/trivy.list
-      - apt-get update
-      - apt-get install -y trivy
       - echo Logging in to Amazon ECR...
       - aws --version
       - aws --region us-east-2 ecr get-login-password | docker login --username AWS --password-stdin 461335211022.dkr.ecr.us-east-2.amazonaws.com
