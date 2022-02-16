@@ -1,5 +1,5 @@
 version: 0.2
-
+ 
 
 phases:
   pre_build:
@@ -30,4 +30,3 @@ artifacts:
   files:
    - imagedefinitions.json
    - target/order-service.jar
-
