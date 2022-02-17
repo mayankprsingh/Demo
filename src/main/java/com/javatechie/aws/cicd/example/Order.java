@@ -44,4 +44,6 @@ public class Order {
 		this.price = price;
 	}
 	
+	System.out.println("Github Action");
+	
 }
