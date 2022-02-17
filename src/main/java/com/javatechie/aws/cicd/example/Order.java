@@ -8,17 +8,15 @@ import lombok.ToString;
 
 public class Order {
 
-    public Order(int id, String name, int quantity, long price) {
+    public Order(int id, String name, int quantity) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.quantity = quantity;
-		this.price = price;
 	}
 	private int id;
     private String name;
     private int quantity;
-    private long price;
 	public int getId() {
 		return id;
 	}
@@ -36,12 +34,6 @@ public class Order {
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
-	}
-	public long getPrice() {
-		return price;
-	}
-	public void setPrice(long price) {
-		this.price = price;
 	}
 	
 }
